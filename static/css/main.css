@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'playfair_display_scregular';
+    src: url('../fonts/playfairdisplaysc-regular-webfont.eot');
+    src: url('../fonts/playfairdisplaysc-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/playfairdisplaysc-regular-webfont.woff2') format('woff2'),
+         url('../fonts/playfairdisplaysc-regular-webfont.woff') format('woff'),
+         url('../fonts/playfairdisplaysc-regular-webfont.ttf') format('truetype'),
+         url('../fonts/playfairdisplaysc-regular-webfont.svg#playfair_display_scregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.width1200{ width: 1200px; margin: 0 auto;}
+.index-nav{ position: fixed; top: 0; left: 0; width: 100%; z-index: 10}
+/*导航菜单*/
+.nav-box{ width: 100%;}
+.nav-top{ background-color: #fff; width: 100%; position: relative; height: .86rem; line-height: .86rem;}
+.wellcom-box{ position: absolute; left: .20rem; top: 0; font-size:.25rem }
+.logo-box{ width: 1.40rem; margin: 0 auto;}
+.lx-box{ position: absolute;top:0; right: .40rem;}
+.lx-box a{ font-size: .16rem; color:#17257a; padding: .05rem 0}
+.lx-box span{ font-size: .16rem; padding: 0 .10rem}
+.lx-box a:nth-of-type(2){ padding-left: .30rem; background: url(../images/wx.png) left center no-repeat;}
+.lx-box a:nth-of-type(3){ padding-left: .30rem; background: url(../images/tel.png) left center no-repeat;}
+.nav-menu{ height: .50rem; background:linear-gradient(180deg, #6773bd 15%, #17257b 85%) }
+.menu-box{ width: 12.00rem; margin: 0 auto; position: relative;}
+.menu-box ul li{ float: left; padding: 0 .38rem}
+.menu-box ul li>a{ color:#fff; display: block; line-height: .50rem; font-size: .18rem;-webkit-transition:all .35s; -o-transition:all .35s; transition:all .35s;}
+.menu-box ul li.active,.menu-box ul li:hover{ background-color: #fff}
+.menu-box ul li.active>a,.menu-box ul li:hover>a{ color: #152379}
+.menu-box ul li .children-box{ display: none; margin: 0 -.20rem; box-shadow: 0 .02rem .05rem rgba(0, 0, 0, 0.1); position: absolute; left: 0; right: 0; top: .50rem; background-color: #fff; padding: .30rem .50rem;}
+.menu-box ul li .children-box h3{ font-size: .20rem; color: #191919;}
+.menu-box ul li .children-box h3 small{ font-size: .12rem; color: #1a1a1a; display: block; line-height: .24rem; text-transform: uppercase;}
+.menu-box ul li .children-box h3 span{ display: block; background-color: #152379; width: .56rem; height: .05rem; margin-top: .05rem;}
+.menu-box ul li .children-box p{ margin-top: .20rem;}
+.menu-box ul li .children-box p a{ font-size: .16rem; color: #2a2a2a;}
+.menu-box ul li:hover .children-box{ display: block;}
+.menu-box ul li .children-box .ch-left{ width: 5.12rem; float: left;}
+.menu-box ul li .children-box .ch-right{ width: 6.08rem; float: right;}
+.menu-box ul li .children-box .ch-right img{ width: 100%;}
+
+/*底部菜单*/
+.foot-box{ background-color: #152379; width: 100%; color: #ccc;}
+.foot-box a{ color: #ccc;}
+.line-box{ font-size: .14rem; border-bottom: 1px solid #fff; padding-bottom: .20rem;} 
+.link-title{ font-size: .18rem; color: #fff;} 
+.link-item{ margin-top: .20rem;}
+.foot-con-box{ padding-bottom: .40rem;}
+.foot-nav-box{ width: 8.10rem; margin-top: .20rem; padding-bottom: .20rem; float: left;}
+.foot-nav-box dl{ float: left; width: 1.64rem;}
+.foot-nav-box dl dt{ font-size: .18rem; color: #fff;}
+.foot-nav-box dl dd{ margin-top: .10rem; font-size: .14rem;}
+.foot-nav-box dl:nth-of-type(3){ width: 3.00rem;}
+.foot-nav-box dl:nth-of-type(3) dd{ width: 50%; float: left; margin-top: .10rem}
+.service-box{ width: 3.90rem; float: right;padding-top: .20rem;}
+.ser-line{ float: left; text-align: right; color: #fff;}
+.ser-line h4{  font-size: .46rem; line-height: .46rem;}
+.ser-line h5{  font-size: .16rem;}
+.ser-line p{  font-size: .18rem; margin-top: .05rem;}
+.ser-code ul li{ float: left; width: .98rem; margin-left: .18rem; text-align: center;}
+.ser-code ul li img{ width: 100%;}
+.ser-code ul li p{ margin-top: .05rem; font-size: .16rem;}
+.copyright-box{ font-size: .12rem; padding: .20rem 0;border-top: 1px solid #fff;}
+.copyright-content{ float: left;}
+.technology{ float: right;}
+.technology a:hover{ color: #fff;}
