@@ -18,5 +18,28 @@
 /*内容区*/
 .info-box{ margin-top: .45rem; }
 
+.info-public-box{ font-size: .22rem; color: #656565; text-transform: uppercase; margin-top: .40rem;}
+.info-public-box .pub-title-1{ color: #152379; }
+.info-public-box .pub-title-2{}
+.info-public-box .pub-title-3{}
+.info-public-box .pub-hr{ width: .44rem; height: .06rem; background-color:  #152379; margin-top: .25rem; }
+
+.culure-item{ padding-bottom: .20rem; margin-top: .40rem; }
+.culure-item ul{ margin: 0 -.40rem; }
+.culure-item ul li{ width: 33.33%; float: left; padding: 0 .40rem; text-align: center; }
+.culure-item ul li>div{border:1px solid #fff; border-radius: .05rem; box-shadow: 0 0 .05rem rgba(0,0,0,.2);padding: .50rem .40rem;}
+.culure-item ul li>div:hover{border:1px solid #92c2fb;}
+.culure-item ul li>div span{ display: inline-block; width: 1.00rem; height: 1.00rem; }
+.culure-item ul li>div span img{ width: 100%; }
+.culure-item ul li>div h4{font-size: .22rem; font-weight: bold; margin-top: .20rem;}
+.culure-item ul li>div h5{ font-size: .20rem; margin-top: .20rem; }
+.culure-item ul li>div p{ font-size: .16rem; margin-top: .30rem; }
+
+.culure-img{ margin-top: .40rem; margin-bottom: .60rem; }
+.culure-img ul{ margin: 0 -.05rem; }
+.culure-img ul li{ width: 25%; float: left; padding: 0 .05rem; }
+.culure-img ul li>div{}
+.culure-img ul li>div img{ width: 100%; }
+
 
 

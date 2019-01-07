@@ -40,7 +40,7 @@
 .menu-box ul li .children-box .ch-right img{ width: 100%;}
 
 /*底部菜单*/
-.foot-box{ background-color: #152379; width: 100%; color: #ccc;}
+.foot-box{ background-color: #152379; width: 100%; color: #ccc; padding-top: .40rem;}
 .foot-box a{ color: #ccc;}
 .line-box{ font-size: .14rem; border-bottom: 1px solid #fff; padding-bottom: .20rem;} 
 .link-title{ font-size: .18rem; color: #fff;} 
