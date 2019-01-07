@@ -461,20 +461,47 @@ $(function(){
         afterRender: function(){
         	addZindex(0);
         	addGlass(0);
+        	getVideo()
         },
         afterLoad: function(anchorLink, index){
-			if(index == 1){
-				$('.section2').find('p').delay(500).animate({
-					left: '0'
-				}, 1500, 'easeOutExpo');
+			if(index == 4){
+				// 第四屏tab切换
+				tabContent(".ic-case-box .tab-content>ul",0);
+				$(".ic-case-box .tab-item ul li").on('click',function(){
+					var index = $(this).index();
+					$(this).addClass("active").siblings().removeClass("active");
+					tabContent(".ic-case-box .tab-content>ul",index);
+				})
+			}
+			if(index == 5){
+				// 第五屏tab切换
+			    tabContent(".ic-new-box .new-tab-content>ul",0);
+			    $(".ic-new-box .tab-item ul li").on('click',function(){
+			    	var index = $(this).index();
+			    	$(this).addClass("active").siblings().removeClass("active");
+			    	tabContent(".ic-new-box .new-tab-content>ul",index);
+			    })
+			}
+			if(index == 6){
+				// 第六屏tab切换
+			    tabContent(".ic-co-box .co-tab-content>ul",0);
+			    $(".ic-co-box .tab-item ul li").on('click',function(){
+			    	var index = $(this).index();
+			    	$(this).addClass("active").siblings().removeClass("active");
+			    	tabContent(".ic-co-box .co-tab-content>ul",index);
+			    })
+			}
+			if(index == 7){
+				initMap();
+			}
+			if(index == 8){
+				initMap();
 			}
 		},
 		onLeave: function(index, direction){
 			if(index == '1'){
-				console.log("233");
-				$('.section2').find('p').delay(500).animate({
-					left: '-120%'
-				}, 1500, 'easeOutExpo');
+			}
+			if(index == '2'){
 			}
 		}
 
@@ -492,30 +519,7 @@ $(function(){
             $.fn.fullpage.setAutoScrolling(true);
         }
     }
-    autoScrolling();
-
-    // tab切换
-    // 第四屏tab切换
-    tabContent(".ic-case-box .tab-content>ul",0);
-    $(".ic-case-box .tab-item ul li").on('click',function(){
-    	var index = $(this).index();
-    	$(this).addClass("active").siblings().removeClass("active");
-    	tabContent(".ic-case-box .tab-content>ul",index);
-    })
-    // 第五屏tab切换
-    tabContent(".ic-new-box .new-tab-content>ul",0);
-    $(".ic-new-box .tab-item ul li").on('click',function(){
-    	var index = $(this).index();
-    	$(this).addClass("active").siblings().removeClass("active");
-    	tabContent(".ic-new-box .new-tab-content>ul",index);
-    })
-    // 第六屏tab切换
-    tabContent(".ic-co-box .co-tab-content>ul",0);
-    $(".ic-co-box .tab-item ul li").on('click',function(){
-    	var index = $(this).index();
-    	$(this).addClass("active").siblings().removeClass("active");
-    	tabContent(".ic-co-box .co-tab-content>ul",index);
-    })
+    autoScrolling();  
 
 });
 //tab切换到对应的内容
@@ -557,9 +561,9 @@ function addGlass(index){
 function addZindex(index){
 	$('.section-1 .swiper-wrapper .swiper-slide').eq(index).find('.swiper-con').addClass("z-index").end().siblings().find('.swiper-con').removeClass("z-index");
 }
-</script>
 
-<script type="text/javascript">
+//视频
+function getVideo(){
 	var options = {
 		muted: true,
 		controls: true,
@@ -569,73 +573,73 @@ function addZindex(index){
 	};
 	var player = videojs('my-player', options, function onPlayerReady() {
 	  videojs.log('Your player is ready!');
-	 
 	  // In this context, `this` is the player that was created by Video.js.
 	  this.play();
-	 
 	  // How about an event listener?
 	  this.on('ended', function() {
 	    videojs.log('Awww...over so soon?!');
 	  });
+	});		
+}
+
+
+//地图
+//创建和初始化地图函数：
+function initMap(){
+	createMap();//创建地图
+	setMapEvent();//设置地图事件
+	addMapControl();//向地图添加控件
+	addMapOverlay();//向地图添加覆盖物
+}
+function createMap(){ 
+	map = new BMap.Map("allmap"); 
+	map.centerAndZoom(new BMap.Point(113.854851,22.779281),18);
+}
+function setMapEvent(){
+	map.enableScrollWheelZoom();
+	map.enableKeyboard();
+	map.enableDragging();
+	map.enableDoubleClickZoom()
+}
+function addClickHandler(target,window){
+	target.addEventListener("click",function(){
+		target.openInfoWindow(window);
 	});
+}
+function addMapOverlay(){
+	var markers = [
+		{content:"电话：0755-27066163<br>地址：深圳市宝安区松岗镇山门村金岛路6号清祥工业园",title:"深圳市永昶门窗有限公司",imageOffset: {width:-46,height:-21},position:{lat:22.779764,lng:113.854869}}
+	];
+	for(var index = 0; index < markers.length; index++ ){
+		var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+		var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+			imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+		})});
+		var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+		var opts = {
+			width: 200,
+			title: markers[index].title,
+			enableMessage: false
+		};
+		var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+		marker.setLabel(label);
+		addClickHandler(marker,infoWindow);
+		map.addOverlay(marker);
+	};
+}
+//向地图添加控件
+function addMapControl(){
+	var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+	map.addControl(scaleControl);
+	var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(navControl);
+	var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+	map.addControl(overviewControl);
+}
+var map;
+// initMap();
 </script>
-<script type="text/javascript">
-    //创建和初始化地图函数：
-    function initMap(){
-      createMap();//创建地图
-      setMapEvent();//设置地图事件
-      addMapControl();//向地图添加控件
-      addMapOverlay();//向地图添加覆盖物
-    }
-    function createMap(){ 
-      map = new BMap.Map("allmap"); 
-      map.centerAndZoom(new BMap.Point(113.854851,22.779281),18);
-    }
-    function setMapEvent(){
-      map.enableScrollWheelZoom();
-      map.enableKeyboard();
-      map.enableDragging();
-      map.enableDoubleClickZoom()
-    }
-    function addClickHandler(target,window){
-      target.addEventListener("click",function(){
-        target.openInfoWindow(window);
-      });
-    }
-    function addMapOverlay(){
-      var markers = [
-        {content:"电话：0755-27066163<br>地址：深圳市宝安区松岗镇山门村金岛路6号清祥工业园",title:"深圳市永昶门窗有限公司",imageOffset: {width:-46,height:-21},position:{lat:22.779764,lng:113.854869}}
-      ];
-      for(var index = 0; index < markers.length; index++ ){
-        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
-        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
-          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
-        })});
-        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
-        var opts = {
-          width: 200,
-          title: markers[index].title,
-          enableMessage: false
-        };
-        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
-        marker.setLabel(label);
-        addClickHandler(marker,infoWindow);
-        map.addOverlay(marker);
-      };
-    }
-    //向地图添加控件
-    function addMapControl(){
-      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
-      map.addControl(scaleControl);
-      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
-      map.addControl(navControl);
-      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
-      map.addControl(overviewControl);
-    }
-    var map;
-      initMap();
-  </script>
 
 </body>
 </html>
