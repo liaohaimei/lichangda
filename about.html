@@ -91,7 +91,7 @@
 	<div class="info-advantage clearfix">
 		<div class="ad-tab-box clearfix">
 			<ul>
-				<li><span>品牌优势</span><div></div></li>
+				<li class="active"><span>品牌优势</span><div></div></li>
 				<li><span>技术优势</span><div></div></li>
 				<li><span>产品优势</span><div></div></li>
 				<li><span>市场优势</span><div></div></li>
@@ -100,11 +100,18 @@
 		</div>
 		<div class="ad-img-box">
 			<div class="ad-img-item">
-				<img src="static/images/about_2.jpg" alt="">
+				<p><img src="static/images/about_2.jpg" alt=""></p>
+				<p><img src="static/images/about_2.jpg" alt=""></p>
 			</div>
 			<div class="ad-desc">
-				<sapn class="ad-icon"><img src="static/images/ad_icon.png" alt=""></sapn>
-				<p>以消费者需要为导向，创新永不止步，独立的产品研发中心，配备专业的研发人员，根据消费潮流趋势，选择名铝素材，精选优秀方案，为消费者需求为导向，创新永不止步</p>
+				<div class="desc-item">
+					<sapn class="ad-icon"><img src="static/images/ad_icon.png" alt=""></sapn>
+					<p>以消费者需要为导向，创新永不止步，独立的产品研发中心，配备专业的研发人员，根据消费潮流趋势，选择名铝素材，精选优秀方案，为消费者需求为导向，创新永不止步</p>
+				</div>
+				<div class="desc-item">
+					<sapn class="ad-icon"><img src="static/images/ad_icon.png" alt=""></sapn>
+					<p>2以消费者需要为导向，创新永不止步，独立的产品研发中心，配备专业的研发人员，根据消费潮流趋势，选择名铝素材，精选优秀方案，为消费者需求为导向，创新永不止步</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -175,5 +182,21 @@
 	</div>
 </div>
 <script src="plugin/fullpage/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		tabContent(".ad-img-item>p",0);
+		tabContent(".ad-desc .desc-item",0);
+		$(".ad-tab-box ul li").on('click',function(){
+			var index = $(this).index();
+			$(this).addClass("active").siblings().removeClass("active");
+			tabContent(".ad-img-item>p",index);
+			tabContent(".ad-desc .desc-item",index);
+		})
+	})
+	//tab切换到对应的内容
+	function tabContent(el,index){
+		$(el).eq(index).show().siblings().hide()
+	}
+</script>
 </body>
 </html>

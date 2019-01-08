@@ -34,14 +34,15 @@
 .info-advantage .ad-tab-box ul{ width: 2.60rem; float: right; margin-right: 20%; padding: .50rem 0;  }
 .info-advantage .ad-tab-box ul li{ text-align: center; height: .80rem; line-height: .80rem; position: relative; cursor: pointer; }
 .info-advantage .ad-tab-box ul li span{ display: inline-block; height: 100%; font-size: .24rem; color: #808080; padding: 0 .20rem; position: relative; z-index: 1;  background-color: #e2f3ff;}
-.info-advantage .ad-tab-box ul li:hover div{ height: 1px; background-color:#152379; width: 100%; position: absolute; top: 50%; left: 0; z-index: 0; }
-.info-advantage .ad-tab-box ul li:hover span{ color:#152379;}
+.info-advantage .ad-tab-box ul li:hover div,.info-advantage .ad-tab-box ul li.active div{ height: 1px; background-color:#152379; width: 100%; position: absolute; top: 50%; left: 0; z-index: 0; }
+.info-advantage .ad-tab-box ul li:hover span,.info-advantage .ad-tab-box ul li.active span{ color:#152379;}
 .info-advantage .ad-img-box{ width: 70%; float: right; height: 5.30rem; position: relative; }
 .info-advantage .ad-img-box .ad-img-item{ width: 100%; height: 100%; overflow: hidden; }
+.info-advantage .ad-img-box .ad-img-item p{ display: none; }
 .info-advantage .ad-img-box .ad-img-item img{ width: 100%; }
 .ad-desc{ position: absolute; background-color: #fff; top: .80rem; width: 2.36rem; padding: .25rem; left: -1.18rem; box-shadow: 0 0 .10rem rgba(0,0,0,.2); font-size: .14rem; color: #808080; line-height: .24rem; }
 .ad-desc .ad-icon{ display: block; width: .70rem; height: .70rem; margin: 0 auto; margin-bottom: .15rem; }
-
+.ad-desc .desc-item{ display: none; }
 /*企业文化*/
 .culure-item{ padding-bottom: .20rem; margin-top: .40rem; }
 .culure-item ul{ margin: 0 -.40rem; }
