@@ -61,5 +61,16 @@
 .culure-img ul li>div{}
 .culure-img ul li>div img{ width: 100%; }
 
+/*联系我们*/
+.contact-item{ background-color: #fafafa; margin-top: .30rem;}
+.contact-item dl{ width: 33.33%; float: left; padding: .30rem .10rem; }
+.contact-item dl dt{ font-size: .20rem; line-height: .30rem;  border-bottom: 1px solid #cbcbcb; padding-bottom: .15rem; }
+.contact-item dl:nth-of-type(1) dt{ background: url(../images/con_tel.png) top right no-repeat; }
+.contact-item dl:nth-of-type(2) dt{ background: url(../images/con_qq.png) center right no-repeat; }
+.contact-item dl:nth-of-type(3) dt{ background: url(../images/con_wx.png) center right no-repeat; }
+.contact-item dl dd{ line-height: .40rem; font-size: .16rem; padding-top: .15rem; }
 
+.contact-img img{ max-width: 100% }
+
+.pub-title{ font-size: .20rem; padding-bottom: .20rem; border-bottom: 1px solid #cfcfcf }
 
