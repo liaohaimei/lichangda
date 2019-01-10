@@ -74,3 +74,11 @@
 
 .pub-title{ font-size: .20rem; padding-bottom: .20rem; border-bottom: 1px solid #cfcfcf }
 
+/*案例展示*/
+.case-box{}
+.case-box ul{ margin: 0 -.24rem; }
+.case-box ul li{ width: 33.33%; float: left; padding: .24rem; }
+.case-box ul li>div{ position: relative; }
+.case-box ul li>div img{ width: 100%; }
+.case-box ul li>div h3{ height: .40rem; line-height: .40rem; font-size: .16rem; color: #fff; background-color: #61605e; padding: 0 .10rem;-webkit-transition:all .30s;-o-transition:all .30s;transition:all .30s;}
+.case-box ul li>div:hover h3{ background-color: #152379;}
