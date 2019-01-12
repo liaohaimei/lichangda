@@ -85,7 +85,7 @@
 .feedback-form .form-row input{ height: .40rem; line-height: .40rem;}
 .feedback-form .form-row input,.feedback-form .form-row textarea{ width: calc(100% - .90rem); border-radius: .02rem;  border: 1px solid #ccc;}
 .feedback-form .form-btn{ padding-left: .90rem;}
-.feedback-form .form-btn button{ border: none; cursor: pointer; background:linear-gradient(180deg, #ffffff 15%, #f3f4f3 85%); font-size: .14rem; text-align: center; padding: .05rem .20rem; margin-right: .30rem; box-shadow: 0 .03rem .05rem rgab(0,0,0,.2)}
+.feedback-form .form-btn button{ border: none; cursor: pointer; background:linear-gradient(180deg, #ffffff 15%, #f3f4f3 85%); font-size: .14rem; text-align: center; padding: .07rem .20rem; margin-right: .30rem; box-shadow: 0 .03rem .05rem rgab(0,0,0,.2)}
 .feedback-form .form-btn button:first-of-type{ color: #fff;  background:linear-gradient(180deg, #6773bd 15%, #17257b 85%)}
 .address-content{ font-size: .18rem;  }
 .contact-map{ height: 5.00rem; margin-bottom: .30rem;}
@@ -135,7 +135,7 @@ bottom: .02rem; right: .02rem; background-color: #152379;  }
 .proshow-img-spec{ padding-bottom: .40rem;}
 .pro-title{ font-size: .26rem; color: #152379; border-bottom: 1px dashed #9298c0; padding-bottom: .30rem; margin-bottom: .30rem;}
 .spec-box{ font-size: .16rem; line-height: .40rem;}
-.pro-img{ width: 5.10rem; float: left;}
+.pro-img{ width: 5.10rem; float: left; height: 3.97rem;}
 .pro-img img{ width: 100%;}
 .pro-spec{ width: calc(100% - 5.40rem); float: right;}
 .pro-introduction{ background-color: #fafafa; padding: .40rem 0;}
@@ -143,3 +143,29 @@ bottom: .02rem; right: .02rem; background-color: #152379;  }
 .title-box{ font-size:.24rem; color: #404040; border-bottom: 1px solid #e5e5e5; padding-bottom: .05rem; }
 .title-box span{ color: #cdcdcd; }
 .int-box,.color-box{ margin-top: .40rem;}
+.pro-img .swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pro-img .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.pro-img .gallery-top {
+  height: 80%;
+  width: 100%;
+}
+.pro-img .gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.pro-img .gallery-thumbs .swiper-slide {
+  height: 100%;
+  opacity: 0.4;
+}
+.pro-img .gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}

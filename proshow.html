@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <title>利昶达门窗</title>
 <link rel="stylesheet" href="static/css/reset.css">
 <link rel="stylesheet" href="static/iconfonts/iconfont.css">
 <link rel="stylesheet" href="static/css/main.css">
 <link rel="stylesheet" href="static/css/css.css">
+<link rel="stylesheet" href="plugin/swiper/css/swiper.min.css">
 </head>
 
 <body>
@@ -68,7 +69,32 @@
 	<div class="info-box width1200 clearfix">
 		<div class="proshow-content clearfix">
 			<div class="proshow-img-spec clearfix">
-				<div class="pro-img"> <img src="static/images/pro_1.jpg"></div>
+				<div class="pro-img"> 
+					<div class="swiper-container gallery-top">
+					  <div class="swiper-wrapper">
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_1.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_2.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_3.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_4.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_5.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_6.jpg)"></div>
+					  </div>
+					  <!-- Add Arrows -->
+					  <div class="swiper-button-next swiper-button-white"></div>
+					  <div class="swiper-button-prev swiper-button-white"></div>
+					</div>
+					<div class="swiper-container gallery-thumbs">
+					  <div class="swiper-wrapper">
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_1.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_2.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_3.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_4.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_5.jpg)"></div>
+					    <div class="swiper-slide" style="background-image:url(static/images/pro_6.jpg)"></div>
+					  </div>
+					</div>
+					<!-- <img src="static/images/pro_1.jpg"> -->
+				</div>
 				<div class="pro-spec">
 					<h1 class="pro-title">金沙平开门</h1>
 					<div class="spec-box clearfix">
@@ -171,21 +197,29 @@
 	</div>
 </div>
 <script src="plugin/fullpage/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript">
-	$(function(){
-		tabContent(".ad-img-item>p",0);
-		tabContent(".ad-desc .desc-item",0);
-		$(".ad-tab-box ul li").on('click',function(){
-			var index = $(this).index();
-			$(this).addClass("active").siblings().removeClass("active");
-			tabContent(".ad-img-item>p",index);
-			tabContent(".ad-desc .desc-item",index);
-		})
-	})
-	//tab切换到对应的内容
-	function tabContent(el,index){
-		$(el).eq(index).show().siblings().hide()
-	}
+<script src="plugin/swiper/js/swiper.min.js"></script>
+<script>
+  var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    loop: true,
+    freeMode: true,
+    loopedSlides: 5, //looped slides should be the same
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    loop:true,
+    loopedSlides: 5, //looped slides should be the same
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  });
 </script>
 </body>
 </html>
