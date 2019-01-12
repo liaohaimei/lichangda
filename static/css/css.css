@@ -1,7 +1,7 @@
 /*当前栏目*/
 .cur-nav-name-box{ border-bottom: 1px solid #e5e5e5; padding-bottom: .48rem; padding-top: .75rem; }
 .nav-name-con{ text-align: center }
-.nav-name-con h2{ font-size: .52rem; color: #ccced9; }
+.nav-name-con h2{ font-size: .52rem; color: #ccced9; text-transform: uppercase; }
 .nav-name-con h1{ font-size: .26rem; }
 /*当前位置*/
 .current-con{ height: .27rem; line-height: .27rem; margin-top: .20rem; font-size: .16rem; position: relative;  color: #7f7f7f;}
@@ -27,6 +27,7 @@
 
 .info-content{ margin-top: .40rem; font-size: .16rem; line-height: .28rem; }
 .info-content p{ margin-bottom: .20rem; }
+.info-content img{ max-width: 100%;}
 
 /*优势*/
 .info-advantage{ margin-top: .60rem; width: 100%; background-color: #e2f3ff }
@@ -72,8 +73,23 @@
 
 .contact-img img{ max-width: 100% }
 
-.pub-title{ font-size: .20rem; padding-bottom: .20rem; border-bottom: 1px solid #cfcfcf }
+.pub-title{ font-size: .20rem; padding-bottom: .20rem; border-bottom: 1px solid #cfcfcf; margin-bottom: .30rem; }
 
+
+.feedback-add-box{ margin: .40rem -.20rem;}
+.feedback-add-box>div{ width: 50%; float: left;}
+.feedback-add-box>div .box-bg{ background-color:#fafafa; min-height: 4.78rem; padding: .40rem .20rem; margin: 0 .20rem; }
+.feedback-form{}
+.feedback-form .form-row{ margin-bottom: .20rem;}
+.feedback-form .form-row label{ display: inline-block; font-size:.16rem;width:.86rem; }
+.feedback-form .form-row input{ height: .40rem; line-height: .40rem;}
+.feedback-form .form-row input,.feedback-form .form-row textarea{ width: calc(100% - .90rem); border-radius: .02rem;  border: 1px solid #ccc;}
+.feedback-form .form-btn{ padding-left: .90rem;}
+.feedback-form .form-btn button{ border: none; cursor: pointer; background:linear-gradient(180deg, #ffffff 15%, #f3f4f3 85%); font-size: .14rem; text-align: center; padding: .05rem .20rem; margin-right: .30rem; box-shadow: 0 .03rem .05rem rgab(0,0,0,.2)}
+.feedback-form .form-btn button:first-of-type{ color: #fff;  background:linear-gradient(180deg, #6773bd 15%, #17257b 85%)}
+.address-content{ font-size: .18rem;  }
+.contact-map{ height: 5.00rem; margin-bottom: .30rem;}
+#allmap {width: 100%;height: 100%;margin:0;}
 /*案例展示*/
 .case-box{}
 .case-box ul{ margin: 0 -.24rem; }
@@ -82,3 +98,48 @@
 .case-box ul li>div img{ width: 100%; }
 .case-box ul li>div h3{ height: .40rem; line-height: .40rem; font-size: .16rem; color: #fff; background-color: #61605e; padding: 0 .10rem;-webkit-transition:all .30s;-o-transition:all .30s;transition:all .30s;}
 .case-box ul li>div:hover h3{ background-color: #152379;}
+/*产品展示*/
+.products-box{}
+.products-box ul{ margin: 0 -.24rem; }
+.products-box ul li{ width: 33.33%; float: left; padding: .24rem; }
+.products-box ul li>div{ position: relative; }
+.products-box ul li>div img{ width: 100%; }
+.products-box ul li>div h3{ height: .40rem; line-height: .40rem; font-size: .16rem; color: #fff; background-color: #61605e; padding: 0 .10rem;-webkit-transition:all .30s;-o-transition:all .30s;transition:all .30s;}
+.products-box ul li>div:hover h3{ background-color: #152379;}
+/*新闻展示*/
+.news-box{}
+.news-box ul{ margin: 0 -.24rem; }
+.news-box ul li{ width: 33.33%; float: left; padding: .24rem; }
+.news-box ul li>div{ position: relative; }
+.news-box ul li>div img{ width: 100%; }
+.news-box ul li>div .news-int{ background-color: #fafafa; padding: .10rem;-webkit-transition:all .30s;-o-transition:all .30s;transition:all .30s;}
+.news-box ul li>div .news-int .news-spec{ height: .70rem; font-size: .14rem;}
+.news-box ul li>div .news-more{ width: .40rem; height: .40rem; line-height: .40rem; text-align: center; position: absolute;
+bottom: .02rem; right: .02rem; background-color: #152379;  }
+.news-box ul li>div .news-more i{ color: #fff; font-size: .20rem;}
+.news-box ul li>div span{ display: inline-block; margin-bottom: .30rem; font-size: .14rem;}
+.news-box ul li>div span i{ margin-right: .05rem;}
+.news-box ul li>div h3{ height: .40rem; line-height: .40rem; font-size: .16rem;}
+.news-box ul li>div:hover .news-int{ background-color: #152379; color: #fff;}
+.news-box ul li>div:hover .news-int *{ color: #fff;}
+.news-box ul li>div:hover .news-more{ background-color: #fff;}
+.news-box ul li>div:hover .news-more i{ color:#152379; }
+
+/*新闻详细*/
+.newshow-title{ font-size: .26rem; text-align: center; color:#152379;}
+.newshow-time{ font-size: .14rem; text-align: center; color: #676767; margin-top: .10rem;}
+.newshow-int{ font-size: .16rem; margin-top: .30rem; line-height: .30rem; margin-bottom: .30rem;}
+.newshow-int img{ max-width: 100%;}
+
+/*产品详细*/
+.proshow-img-spec{ padding-bottom: .40rem;}
+.pro-title{ font-size: .26rem; color: #152379; border-bottom: 1px dashed #9298c0; padding-bottom: .30rem; margin-bottom: .30rem;}
+.spec-box{ font-size: .16rem; line-height: .40rem;}
+.pro-img{ width: 5.10rem; float: left;}
+.pro-img img{ width: 100%;}
+.pro-spec{ width: calc(100% - 5.40rem); float: right;}
+.pro-introduction{ background-color: #fafafa; padding: .40rem 0;}
+.pro-color{ padding: .40rem 0;}
+.title-box{ font-size:.24rem; color: #404040; border-bottom: 1px solid #e5e5e5; padding-bottom: .05rem; }
+.title-box span{ color: #cdcdcd; }
+.int-box,.color-box{ margin-top: .40rem;}

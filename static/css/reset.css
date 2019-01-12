@@ -2,7 +2,7 @@
 *{ -webkit-box-sizing: border-box;box-sizing: border-box;}
 html{background-color:#fff;color:#000;font-size:100px;height: 100%;-webkit-tap-highlight-color: transparent;}
 body,ul,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,figure,form,fieldset,legend,input,textarea,button,p,blockquote,th,td,pre,xmp{margin:0;padding:0;font-size:.12rem}
-body,input,textarea,button,select,pre,xmp,tt,code,kbd,samp{line-height:1.5;font-family:tahoma,arial,"Hiragino Sans GB",simsun,sans-serif}
+body,input,textarea,button,select,pre,xmp,tt,code,kbd,samp{font-family:tahoma,arial,"Hiragino Sans GB",simsun,sans-serif}
 h1,h2,h3,h4,h5,h6,p,dd,small,big,input,textarea,button,select{font-size:100%}
 h1,h2,h3,h4,h5,h6{font-family:tahoma,arial,"Hiragino Sans GB","微软雅黑",simsun,sans-serif}
 h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal}
@@ -16,7 +16,7 @@ article,aside,footer,header,section,nav,figure,figcaption,hgroup,details,menu{di
 audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
 blockquote:before,blockquote:after,q:before,q:after{content:"\0020"}
 textarea{overflow:auto;resize:vertical}
-input,textarea,button,select,a{outline:0 none;border: none;}
+input,textarea,button,select,a{outline:0 none;}
 button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
 mark{background-color:transparent}
 a,ins,s,u,del{text-decoration:none}
